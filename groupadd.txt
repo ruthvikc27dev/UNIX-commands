@@ -1,0 +1,18 @@
+groupadd -
+
+#Normal Groups
+groupadd mygroup
+groupadd -f mygroup            #Force, if it already exists. For exit code to return 0;
+group -g 1010 mygroup          #Creating a group with specific gid
+getent group                   #Prints all the groups
+groupadd -o -g 1010 mygroup    # allows you to create a group with non-unique GID
+
+#There is no real technical difference between the system and regular (normal) groups. Usually, system groups are used for some special system operation purposes, like creating backups or doing system maintenance
+#System groups
+
+#The -K (--key) option followed by KEY=VAL allows you to override the default values specified in the /etc/login.defs file.
+vi /etc/login.defs
+
+groupadd -r mysystemgroup                                    #For system group
+groupadd -K GID_MIN=1200 -K GID_MAX=1500 mygroup             #To create GID between 2 ranges
+groupadd -p grouppassword mygroup                            #Adding a password to a group

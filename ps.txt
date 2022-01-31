@@ -1,0 +1,18 @@
+ps and kill -
+
+ps
+ps -aux                    # UNIX style
+ps aux                     # BSD style
+ps --quick-pid pid         # GNU style
+ps x                       # Shows every process running by the user
+ps -He                     # Process relationship
+ps -axjf                   # Process relationship - another variation
+
+STAT -
+R - Running
+S - Sleeping or requesting for input or resource
+s - Root process
+T - Process is stopped
+
+
+kill pid

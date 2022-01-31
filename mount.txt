@@ -1,0 +1,8 @@
+mount (mounting external filesystems) -
+
+ll /dev/ | grep -i cd
+
+t - type
+
+mount -t iso9660 /dev/sr0 /mnt
+umount /mnt

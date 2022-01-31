@@ -1,0 +1,13 @@
+tar - (tap archive)
+
+c - for creating an archive
+v - display the progress of the command
+f - allow to specify the filename.
+x - for extracting an archive
+
+tar -cvf filename.tar fileOrDirForCompressing 
+tar -xvf filename.tar
+
+For tar.gz - (z option must come after c & x)
+tar -czvf filename.tar.gz fileOrDirForCompressing
+tar -xzvf filename.tar.gz

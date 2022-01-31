@@ -1,0 +1,6 @@
+fdisk (Partition a disk) -
+
+l - list all the disk
+
+fdisk -l
+fdisk disk

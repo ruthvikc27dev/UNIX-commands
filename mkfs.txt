@@ -1,0 +1,7 @@
+mkfs (Make a file system) -
+
+t - type of file system
+
+mkfs -t ext4 disk
+
+then mount the disk

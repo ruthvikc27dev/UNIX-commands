@@ -1,0 +1,6 @@
+sudoers
+entry in /etc/sudoers:
+
+loqman    ALL=(root) NOPASSWD: /home/user/script.sh
+
+sudo script.sh

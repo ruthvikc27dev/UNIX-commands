@@ -1,0 +1,64 @@
+Linux file directories -
+
+Filesystem heirarchy standard
+
+/bin                      #Basic binaries are stored here. ls, cat, bash ...
+/sbin                     #System binaries where the system adminstrator use, a standard user will not be able to use without permission (root)
+                          #/bin and /sbin contain the files and needed to be accessible in single user mode
+						  #Single user mode is a special mode that boots you in as root user to allow you to do system repairs, upgrades or test.
+						  #Networking is usually disabled in this due to security issues
+						  #When you install a program, they are not installed in these folders.
+						  
+/boot                     #It contains everything required to boot
+
+/cdrom                    #For mounting cd
+
+/dev                      #This is where devices live
+
+/etc                      #etcetra
+                          #This is where all the configruations(system-wide) for a program are stored
+						  
+/lib
+/lib32
+/lib64                    #This is where the libraries are stored
+                          #They are required for the programs to run. /bin /sbin and more
+						  
+/mnt
+/media                    #Other mounted drives
+                          #Media was not present before. It was introduced by the distros for auto mounting
+						  #To manually mount use /mnt
+						  
+/opt                      #This is optional folder
+                          #Manually installed programs by vendors reside
+						  #This is where you can install the software you made
+						  
+/proc                     #It contains the system processes and resources.
+                          #Each process will contain a directory and in that directory information about that process will be present
+						  #cat /proc/cpuinfo
+						  #cat /proc/uptime
+						  
+/root                     #It is home folder of root unlike other users
+
+/run                      #This is new and different distros use it differently
+                          #tempfs - which means it runs in RAM
+						  #This folder is usually emptied when reboot the system, in some occassions you can find some files which are stuck here
+                          #Contains run time information when OS bootsup 
+
+/snap                     #This is where snap packages are stored
+                          #This is mainly for ubuntu
+						  #These packages are self contained packages that run differently than regular packages and applications
+						  
+/srv                      #This is where service data is stored
+ 
+/sys                      #System folder
+                          #This is way to interact with kernal
+						  #This is similar to /run
+
+/tmp                      #Temporary directory
+                          #This where the applications store temporary information
+						  #This folder is usually emptied when reboot the system, in some occassions you can find some files which are stuck here
+
+/usr                      #This is the user application space where the packages are installed which are used by a specfic user
+                          #These applications are non essential for basic system operation
+
+/var                      #It contains files and folders that are expected to grow in size

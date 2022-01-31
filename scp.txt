@@ -1,0 +1,11 @@
+scp - (secure copy)
+
+#Make sure the directory you are copying to on server is owned by the user username
+
+r - recursive
+
+To send -
+scp source_file target_folder
+scp ~oracle_scripts user@ip_address:path       #Use root only
+
+To receive, just swap

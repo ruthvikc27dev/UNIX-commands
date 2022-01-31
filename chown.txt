@@ -1,0 +1,17 @@
+chown (Change ownership) -
+
+#should have root previlege
+
+id
+id oracle
+id devenv
+
+chgrp user file
+
+#Changing group can also be done with chown
+chown user: file
+chown user:group file
+chown :group file
+chown -R user file                #Recursive folders
+chown -Rh user file               #If the user name contains any symobols, to ignore those symbols
+chown --reference=file1 file2     #Copying the same ownership of file1 to file2

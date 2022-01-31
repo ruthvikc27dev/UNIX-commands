@@ -1,0 +1,23 @@
+grep - (Global regular expression print)
+
+w  - exact match
+i  - case insensitive
+n  - to show lines where the pattern matched
+r  - recursive search. Search patterns in file in sub directories
+l  - return only files where the patterns matched
+c  - returns the count patterns matched in a file
+
+
+
+-B number   -  number of lines to show before the matched pattern
+-A number   -  number of lines to show after the matched pattern
+-C number   -  number of lines to show before & after the matched pattern
+
+
+grep "search string" file             #Matches that string in that file
+grep "search string" ./*              #Search the pattern in every file in the current directory
+grep "search string" ./*.txt          #Search the pattern in every txt file in the current directory
+grep "...-...-...." ./*               #(.) - matches any single character
+grep "\d{3}-\d{3}-\d{4}" ./*          #Pattern is same as the above but does not work because grep is not using pro compaitable regular expressions
+grep -P "\d{3}-\d{3}-\d{4}" ./*       #This must work in Linux (uses GNU grep) but not MAC (uses BSD grep)
+grep -V

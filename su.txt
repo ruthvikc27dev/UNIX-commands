@@ -1,0 +1,7 @@
+su -
+
+su - username
+passwd                       #To change the password of the current user
+
+su -i       #To go to root from another user which has adminstrator privileges
+passwd      #To set a password for root

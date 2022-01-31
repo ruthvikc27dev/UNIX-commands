@@ -1,0 +1,29 @@
+systemd - 
+
+systemctl -
+sudo dnf install httpd
+sudo apt install apache2 (debian)
+
+systemctl                    #Shows all the services running in the background
+systemctl status httpd       #Shows the status of httpd
+systemctl enable httpd       #To enable the unit or service or daemon (Now it will start automatically when OS boots up)
+systemctl enable --now httpd #Enable & start 
+systemctl disable httpd      #To disable the unit or service or daemon
+systemctl restart httpd      #Restarts the unit
+systemctl start httpd        #To start manually
+systemctl stop httpd         #To stop manually
+systemctl reload httpd       #Keep the unit running. It will update the configruation changed. Not all configruation changes will applied. You may need to restart.
+
+Allow it in firewall
+
+#To run it as a specific user
+sudo dnf install syncthing
+systemctl status syncthing@devenv               #Service@user
+systemctl enable syncthing@devenv               
+systemctl start syncthing@devenv 
+
+
+cd /user/lib/systemd/system
+vi syncthing@.service
+
+systemctl list-unit-files --type=service

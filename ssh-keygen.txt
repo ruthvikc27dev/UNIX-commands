@@ -1,0 +1,21 @@
+ssh-keygen
+
+Asks for path
+Asks for paraphrase - must be strong
+Asks to reenter paraphrase
+
+it will generate a pub file in below path
+ls ~.ssh
+you will find .pub file
+copy the contents of this pub file and paste it in the "Add public ssh key" for your cloud provider
+
+
+ssh user@ip_address
+Enter the paraphrase that you have entered while create pub (public) file.
+
+cat /etc/os-release
+echo $SHELL
+
+
+
+ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]

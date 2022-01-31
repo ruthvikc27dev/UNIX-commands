@@ -1,0 +1,7 @@
+userdel -
+
+userdel username
+userdel -r username                          #Use the -r (--remove) option to force userdel to remove the user’s home directory and mail spool
+sudo killall -u username                     #If the user you want to remove is still logged in, or if there are running processes that belong to this user, the userdel command does not allow to remove the user.
+userdel -f username                          #Force remove
+
