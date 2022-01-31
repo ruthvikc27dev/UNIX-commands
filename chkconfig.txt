@@ -1,0 +1,23 @@
+This is the way I do it on Red Hat Linux systems.
+
+Put your script in /etc/init.d, owned by root and executable. At the top of the script, you can give a directive for chkconfig. Example, the following script is used to start a Java application as user oracle.
+
+The name of the script is /etc/init.d/apex
+
+#!/bin/bash
+# chkconfig: 345 99 10
+# Description: auto start apex listener
+#
+case "$1" in
+ 'start')
+   su - oracle -c "cd /opt/apex ; java -jar apex.war > logs/apex.log 2>logs/apex_error.log &";;
+ 'stop')
+   echo "put something to shutdown or kill the process here";;
+esac
+This says that the script must run at levels 3, 4, and 5, and the priority for start/stop is 99 and 10.
+
+Then, as user root you can use chkconfig to enable or disable the script at startup:
+
+chkconfig --list apex
+chkconfig --add apex
+And you can use service start/stop apex.
